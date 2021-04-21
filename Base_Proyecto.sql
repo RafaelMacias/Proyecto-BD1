@@ -7,9 +7,9 @@ create table info_contacto(
     nombre2 nvarchar(50),
     apellido1 nvarchar(50),
     apellido2 nvarchar(50),
-    correo nvarchar(20),
+    correo varchar(200),
     celular nvarchar(8),
-    direccion nvarchar(200),
+    direccion varchar(200),
     fecha_nacimiento date
 );
 
