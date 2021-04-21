@@ -1,7 +1,6 @@
 create database universidad;
 
 use universidad;
-
 create table info_contacto(
     DNI nvarchar(20) primary key,
     nombre1 nvarchar(50),
@@ -21,8 +20,9 @@ create table edificio (
 
 create table aula(
     cod_aula nvarchar(20) Primary Key,
-    CONSTRAINT fk_edificio FOREIGN KEY (cod_edificio) REFERENCES edificio,
-    capacidad nvarchar(20)
+    cod_edificio nvarchar(20),
+    FOREIGN KEY (cod_edificio) REFERENCES edificio(cod_edificio),
+    capacidad int
 );
 
 create table periodo(
@@ -35,75 +35,97 @@ create table periodo(
 
 create table alumno(
     ncuenta nvarchar(20) primary key,
-    CONSTRAINT fk_DNI FOREIGN KEY (DNI) REFERENCES info_contacto
+    DNI nvarchar(20),
+    FOREIGN KEY (DNI) REFERENCES info_contacto(DNI)
 );
 
 create table decano(
     id_decano nvarchar(20) primary key,
-    CONSTRAINT fk_DNI FOREIGN KEY (DNI) REFERENCES info_contacto
+    DNI nvarchar(20),
+    FOREIGN KEY (DNI) REFERENCES info_contacto(DNI)
 );
 
 create table jefe_carrera(
     id_jefe nvarchar(20) primary key,
-    CONSTRAINT fk_DNI FOREIGN KEY (DNI) REFERENCES info_contacto
+    DNI nvarchar(20),
+    FOREIGN KEY (DNI) REFERENCES info_contacto(DNI)
 );
 
 create table coord_carrera (
     id_coordinador nvarchar (20) primary key,
-    CONSTRAINT fk_DNI FOREIGN KEY (DNI) REFERENCES info_contacto
+    DNI nvarchar(20),
+    FOREIGN KEY (DNI) REFERENCES info_contacto(DNI)
 );
 
 create table docente(
     id_docente nvarchar(20) primary key,
-    CONSTRAINT fk_DNI FOREIGN KEY (DNI) REFERENCES info_contacto
+    DNI nvarchar(20),
+    FOREIGN KEY (DNI) REFERENCES info_contacto(DNI)
 );
 
 create table facultad (
     cod_facultad nvarchar (20) primary key,
     nombre nvarchar (50),
-    CONSTRAINT fk_edificio FOREIGN KEY (cod_edificio) REFERENCES edificio,
-    CONSTRAINT fk_decano FOREIGN KEY (id_decano) REFERENCES decano
+    cod_edificio nvarchar(20),
+    id_decano nvarchar(20),
+    FOREIGN KEY (cod_edificio) REFERENCES edificio(cod_edificio),
+    FOREIGN KEY (id_decano) REFERENCES decano(id_decano)
 );
 
 create table carrera (
     cod_carrera nvarchar (20) primary key,
     nombre nvarchar (50),
-    CONSTRAINT fk_jefe FOREIGN KEY (id_jefe) REFERENCES jefe_carrera,
-    CONSTRAINT fk_coor_carrera FOREIGN KEY (id_coordinador) REFERENCES coord_carrera,
-    CONSTRAINT fk_edificio FOREIGN KEY (cod_edificio) REFERENCES edificio,
-    CONSTRAINT fk_facultad FOREIGN KEY (cod_facultad) REFERENCES facultad
+    id_jefe nvarchar(20),
+    id_coordinador nvarchar(20),
+    cod_edificio nvarchar(20),
+    cod_facultad nvarchar(20),
+    FOREIGN KEY (id_jefe) REFERENCES jefe_carrera(id_jefe),
+    FOREIGN KEY (id_coordinador) REFERENCES coord_carrera(id_coordinador),
+    FOREIGN KEY (cod_edificio) REFERENCES edificio(cod_edificio),
+    FOREIGN KEY (cod_facultad) REFERENCES facultad(cod_facultad)
 );
 
 create table solicitud (
     id_solicitud nvarchar(20) primary key,
-    fecha_solicitud varchar(100),
+    fecha_solicitud date,
     motivo varchar(100),
     dictamen varchar(100),
-    fecha_dictamen varchar(100),
-    CONSTRAINT fk_alumno FOREIGN KEY (ncuenta) REFERENCES alumno,
-    CONSTRAINT fk_coor_carrera FOREIGN KEY (id_coordinador) REFERENCES coord_carrera,
-    CONSTRAINT fk_carrera FOREIGN KEY (cod_carrera) REFERENCES carrera
+    fecha_dictamen date,
+    ncuenta nvarchar(20),
+    id_coordinador nvarchar(20),
+    cod_carrera nvarchar (20),
+    FOREIGN KEY (ncuenta) REFERENCES alumno(ncuenta),
+    FOREIGN KEY (id_coordinador) REFERENCES coord_carrera(id_coordinador),
+    FOREIGN KEY (cod_carrera) REFERENCES carrera(cod_carrera)
 );
 
-create table aula(
-    cod_aula nvarchar(20) primary key,
-    CONSTRAINT fk_edificio FOREIGN KEY (cod_edificio) REFERENCES edificio,
-    capacidad int
+create table asignatura(
+    cod_asignatura nvarchar(20) primary key,
+    cod_carrera nvarchar(20),
+    nombre varchar(100),
+    uv nvarchar(20),
+    FOREIGN KEY (cod_carrera) REFERENCES carrera(cod_carrera)
 );
 
 create table seccion (
     cod_seccion nvarchar(20) primary key,
-    CONSTRAINT fk_asignatura FOREIGN KEY (cod_asignatura) REFERENCES asignatura,
-    CONSTRAINT fk_aula FOREIGN KEY (cod_aula) REFERENCES aula,
-    hora_inicio varchar(20),
-    hora_final varchar(20),
+    cod_asignatura nvarchar(20),
+    cod_aula nvarchar(20),
+    cod_docente nvarchar(20),
+    cod_periodo nvarchar(20),
+    hora_inicio time,
+    hora_final time,
     dias varchar(20),
-    CONSTRAINT fk_docente FOREIGN KEY (cod_docente) REFERENCES docente,
-    CONSTRAINT fk_periodo FOREIGN KEY (cod_periodo) REFERENCES periodo
+    FOREIGN KEY (cod_asignatura) REFERENCES asignatura(cod_asignatura),
+    FOREIGN KEY (cod_aula) REFERENCES aula(cod_aula),
+    FOREIGN KEY (cod_docente) REFERENCES docente(id_docente),
+    FOREIGN KEY (cod_periodo) REFERENCES periodo(cod_periodo)
 );
 
 create table alumno_asignatura (
-    ncuenta nvarchar(20) primary key,
-    CONSTRAINT fk_asignatura FOREIGN KEY (cod_asignatura) REFERENCES asignatura,
-    calificacion int
+    ncuenta nvarchar(20),
+    cod_asignatura nvarchar(20),
+    calificacion int,
+    primary key(ncuenta, cod_asignatura),
+    FOREIGN KEY (cod_asignatura) REFERENCES asignatura(cod_asignatura)
 );
