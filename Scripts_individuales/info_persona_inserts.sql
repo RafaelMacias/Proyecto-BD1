@@ -21,8 +21,30 @@ insert into info_contacto values('1201-2003-08854','Elizabeth','Scarleth','Cruz'
 insert into info_contacto values('1309-1983-25680','Javier','Orlando','Viera','Mejia','javier.mejia@unah.hn','96857884','San Jeronimo','1983-6-18');
 
 
-insert into info_contacto values ('0801-1970-1001', 'Dany', 'Joel', 'Diaz', 'Vasquez', 'joel_diaz@unah.hn.edu', '81818181', 'Col. Hato, sector 2, casa n2', '1970-11-22')
-insert into info_contacto values ('0801-1990-1001', 'Ana', 'Estefani', 'Aceintuno', 'Romero', 'ana_romero@unah.hn', '91919191', 'Col. Cerro grande, casa n54', '1990-03-28')
-insert into info_contacto values ('0801-1990-2001', 'Julisa', 'Lizeth', 'Aamador', 'Ponce', 'julisa_ponce@unah.hn', '92929292', 'Col. Kenedy, casa n11', '1990-04-15')
-insert into info_contacto values ('0801-1990-3001', 'Orlin', 'Jacob', 'Cruz', 'Cardona', 'orlin_cruz@unah.hn', '93939393', 'Col. Las Mercedes, casa n63', '1990-08-30')
-insert into info_contacto values ('0801-1990-4001', 'Carlos', 'Javier', 'Elvir', 'Flores', 'carlos_elvir@unah.hn', '94949494', 'Col. Suyapa, cana n44', '1990-12-15')
+insert into info_contacto values ('0801-1970-10014', 'Dany', 'Joel', 'Diaz', 'Vasquez', 'joel_diaz@unah.hn.edu', '81818181', 'Col. Hato, sector 2, casa n2', '1970-11-22') ;
+insert into info_contacto values ('0801-1990-10011', 'Ana', 'Estefani', 'Aceintuno', 'Romero', 'ana_romero@unah.hn', '91919191', 'Col. Cerro grande, casa n54', '1990-03-28');
+insert into info_contacto values ('0801-1990-20015', 'Julisa', 'Lizeth', 'Aamador', 'Ponce', 'julisa_ponce@unah.hn', '92929292', 'Col. Kenedy, casa n11', '1990-04-15');
+insert into info_contacto values ('0801-1990-30014', 'Orlin', 'Jacob', 'Cruz', 'Cardona', 'orlin_cruz@unah.hn', '93939393', 'Col. Las Mercedes, casa n63', '1990-08-30');
+insert into info_contacto values ('0801-1990-40016', 'Carlos', 'Javier', 'Elvir', 'Flores', 'carlos_elvir@unah.hn', '94949494', 'Col. Suyapa, casa n44', '1990-12-15');
+
+insert into info_contacto values ('0801-1984-52404', 'Wilmer', 'Isai', 'Romero', 'Vaquedano', 'wilmer_romero@unah.hn', '98542130', 'Col. Robles', '1984-11-19');
+insert into info_contacto values ('0801-1989-45841', 'Suli', 'Margarita', 'Salinas', 'Zuniga', 'suli_salinas@unah.hn', '32845175', 'Col. Carrizal', '1989-05-11');
+insert into info_contacto values ('0801-1975-65844', 'Jeimi', 'Carolina', 'Pereira', 'Flores', 'jeimi_pereira@unah.hn', '84526574', 'Col. Cerro Grande', '1975-07-28');
+insert into info_contacto values ('0801-1998-85127', 'Cindy', 'Janely', 'Godoy', 'Pereira', 'cindy_godoy@unah.hn', '32845511', 'Aldea Santa Rosa', '1998-12-12');
+insert into info_contacto values ('1314-1996-85871', 'Flint', 'Steven', 'Alvarado', 'Bonilla', 'flint_alvarado@unah.hn', '88453274', 'Lomas de Toncontin', '1996-02-29');
+insert into info_contacto values ('8054-1988-78232', 'Dante', 'Jars', 'Medina', 'Vaca', 'dante_medina@unah.hn', '99583355', 'Res. Hidalgos', '1988-03-15');
+insert into info_contacto values ('0807-1980-84214', 'Eduardo', 'Alexander', 'Cuevas', 'Fortin', 'eduardo_cuevas@unah.hn', '87542163', 'Col. Pedegral', '1980-08-28');
+insert into info_contacto values ('1418-1998-15758', 'Darla', 'Francis', 'Castellano', 'Vargas', 'darla_castellano@unah.hn', '96887421', 'Res. Maria Auxiliadora', '1998-04-04');
+insert into info_contacto values ('1502-2001-85694', 'Alexandra', 'Patiel', 'Cuello', 'Robles', 'alexandra_cuello@unah.hn', '32856544', 'Col. Villa Nueva', '2001-04-21');
+insert into info_contacto values ('1401-2003-65876', 'Francis', 'Georgina', 'Mejia', 'Rodriguez', 'francis_mejia@unah.hn', '33658710', 'Col. Laureles', '2003-11-01');
+insert into info_contacto values ('0801-1999-15517', 'Francisca', 'Daniela', 'Gonzales', 'Padilla', 'francisca_gonzales@unah.hn', '33856571', 'Col. Tres de Mayo', '1999-07-21');
+insert into info_contacto values ('0801-1992-99651', 'Darcy', 'Estefany', 'Bardales', 'Valle', 'darcy_bardales@unah.hn', '98546321', 'Res. Bella Oriente', '1992-10-27');
+insert into info_contacto values ('0801-1998-14144', 'Dalia', 'Paola', 'Montes', 'Villa', 'dalia_montes@unah.hn', '89654120', 'Col. Kennedy', '1998-06-11');
+insert into info_contacto values ('0410-1984-25418', 'Chelato', 'Jose', 'Ucles', 'Herrera', 'chelato_ucles@unah.hn', '98545512', 'Col. Satelite', '1984-04-12');
+insert into info_contacto values ('0814-1989-65747', 'Roxan', 'Janen', 'Elvir', 'Rosario', 'roxan_elvir@unah.hn', '98743254', 'Col. Granada', '1989-05-25');
+insert into info_contacto values ('0801-2005-45321', 'Katia', 'Jasmin', 'Mils', 'Perez', 'katia_mils@unah.hn', '89635287', 'Col. Espiritu Santo', '2005-04-08');
+insert into info_contacto values ('1214-2002-47853', 'Michell', 'Dayan', 'West', 'Herrera', 'michell_west@unah.hn', '95457784', 'Res. Las Uvas', '2002-09-28');
+insert into info_contacto values ('0208-2004-54821', 'Stefania', 'Gin', 'Adrian', 'Tomms', 'stefania_adrian@unah.hn', '34120080', 'Col. El Reparto', '2004-12-31');
+insert into info_contacto values ('0801-1997-21214', 'Delia', 'Steph', 'Valladares', 'Romero', 'delia_valladares@unah.hn', '97541201', 'Col. Nuevos Horizontes', '1997-06-21');
+insert into info_contacto values ('1204-2001-65842', 'Albert', 'Tom', 'Brenaman', 'Cubas', 'albert_brenaman@unah.hn', '31546208', 'Col. Torocagua', '2001-09-15');
+insert into info_contacto values ('0801-1998-40446', 'Frank', 'Josh', 'Torres', 'Dalves', 'frank_torres@unah.hn', '97543222', 'Res. Miramontes', '1998-12-01');
