@@ -1,5 +1,3 @@
-SELECT * FROM aula;
-
 INSERT INTO `miprimeradb`.`aula` (`cod_aula`, `cod_edificio`, `capacidad`) VALUES ('A1-101', 'A1', '50');
 INSERT INTO `miprimeradb`.`aula` (`cod_aula`, `cod_edificio`, `capacidad`) VALUES ('A1-202', 'A1', '40');
 INSERT INTO `miprimeradb`.`aula` (`cod_aula`, `cod_edificio`, `capacidad`) VALUES ('A2-101', 'A2', '50');
