@@ -25,12 +25,19 @@ CONSTRAINT fk_carrera FOREIGN KEY (cod_carrera) REFERENCES carrera
 
 
 create table seccion (
-cod_seccion nvarchar(20) primary key,
-CONSTRAINT fk_asignatura FOREIGN KEY (cod_asignatura) REFERENCES asignatura,
-CONSTRAINT fk_aula FOREIGN KEY (cod_aula) REFERENCES aula,
-hora_inicio varchar(20), hora_final varchar(20), dias varchar(20),
-CONSTRAINT fk_docente FOREIGN KEY (cod_docente) REFERENCES docente,
-CONSTRAINT fk_periodo FOREIGN KEY (cod_periodo) REFERENCES preiodo
+cod_seccion nvarchar(20),
+cod_asignatura nvarchar(20),
+cod_aula nvarchar(20),
+cod_docente nvarchar(20),
+cod_periodo nvarchar(20),
+hora_inicio time,
+hora_final time,
+dias varchar (20),
+primary key (cod_seccion,cod_asignatura,cod_periodo),
+FOREIGN KEY (cod_asignatura) REFERENCES asignatura(cod_asignatura),
+FOREIGN KEY (cod_aula) REFERENCES aula(cod_aula),
+FOREIGN KEY (cod_docente) REFERENCES docente (id_docente),
+FOREIGN KEY (cod_periodo) REFERENCES periodo (cod_periodo)
 );
 
 create table alumno_asignatura (
