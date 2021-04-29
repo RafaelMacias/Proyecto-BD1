@@ -18,3 +18,4 @@ insert into info_contacto values('0306-1999-01284', 'Orlando', 'Jose', 'Donaire'
 insert into info_contacto values('0313-1998-00084', 'Edwin', 'Javier', 'Hernandez', 'Discua', 'edwin.hernandez@unah.hn','98158774', 'Brisas del Humuya', '1998-3-5');
 insert into info_contacto values('0410-2002-00568','Alexander','Joel','Merlo','Arita','joel.arita@unah.hn','87653212','Barrio Cabanias','2002-11-18');
 insert into info_contacto values('1201-2003-08854','Elizabeth','Scarleth','Cruz','Chan','elizabeth.cruz@unah,hn','32857496', 'Barrio Abajo','2003-6-25');
+insert into info_contacto values('1309-1983-25680','Javier','Orlando','Viera','Mejia','javier.mejia@unah.hn','96857884','San Jeronimo','1983-6-18');
