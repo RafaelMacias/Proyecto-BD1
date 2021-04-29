@@ -7,5 +7,5 @@ apellido2 nvarchar(50),
 correo nvarchar(20),
 celular nvarchar(8),
 direccion nvarchar(200),
-fecha_nacimiento date 
+fecha_nacimiento date  
 );
