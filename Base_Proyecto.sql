@@ -28,7 +28,7 @@ create table aula(
 create table periodo(
     cod_periodo nvarchar(20) Primary key,
     numero int,
-    año date,
+    año year,
     inicio date,
     final date
 );
