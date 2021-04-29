@@ -1,0 +1,3 @@
+INSERT INTO `miprimeradb`.`carrera` (`cod_carrera`, `nombre`, `id_jefe`, `id_coordinador`, `cod_edificio`, `cod_facultad`) VALUES ('IS', 'Ingenieria en Sistemas', '1', '1', 'B2', 'FI');
+INSERT INTO `miprimeradb`.`carrera` (`cod_carrera`, `nombre`, `id_jefe`, `id_coordinador`, `cod_edificio`, `cod_facultad`) VALUES ('CD', 'Carrera de Derecho', '2', '2', 'A2', 'FCJ');
+INSERT INTO `miprimeradb`.`carrera` (`cod_carrera`, `nombre`, `id_jefe`, `id_coordinador`, `cod_edificio`, `cod_facultad`) VALUES ('CA', 'Carrera de Administracion', '3', '3', 'C1', 'FCE');
