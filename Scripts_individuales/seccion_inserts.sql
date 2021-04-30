@@ -3,7 +3,7 @@ insert into seccion values('0900','CDE-053','A2-202','2','201501','09:00','10:00
 insert into seccion values('0901','CDE-053','A2-101','3','201501','09:00','10:00','LuMaMiJu');
 insert into seccion values('1000','CDE-042','A2-202','4','201502','10:00','11:00','LuMiVi');
 insert into seccion values('1100','CDE-053','A2-202','5','201502','11:00','12:00','LuMiJu');
-insert into seccion values('07000','CE040','C1-101','1','201502','07:00','08:00','LuMaMi');
+insert into seccion values('0700','CE040','C1-101','1','201502','07:00','08:00','LuMaMi');
 insert into seccion values('1700','IS-501','B2-201','6','201502','17:00','18:00','LuMaMiJuVi');
 insert into seccion values('1300','IS-511','B2-101','7','201502','13:00','14:00','LuMaMiJu');
 insert into seccion values('1400','MM-314','B2-201','8','201601','14:00','15:00','LuMaMi');
