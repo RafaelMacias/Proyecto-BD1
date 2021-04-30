@@ -1,15 +1,16 @@
 create database universidad;
 
 use universidad;
+
 create table info_contacto(
     DNI nvarchar(20) primary key,
     nombre1 nvarchar(50),
     nombre2 nvarchar(50),
     apellido1 nvarchar(50),
     apellido2 nvarchar(50),
-    correo varchar(200),
+    correo nvarchar(20),
     celular nvarchar(8),
-    direccion varchar(200),
+    direccion nvarchar(200),
     fecha_nacimiento date
 );
 
@@ -28,15 +29,9 @@ create table aula(
 create table periodo(
     cod_periodo nvarchar(20) Primary key,
     numero int,
-    año year,
+    año date,
     inicio date,
     final date
-);
-
-create table alumno(
-    ncuenta nvarchar(20) primary key,
-    DNI nvarchar(20),
-    FOREIGN KEY (DNI) REFERENCES info_contacto(DNI)
 );
 
 create table decano(
@@ -85,6 +80,14 @@ create table carrera (
     FOREIGN KEY (cod_facultad) REFERENCES facultad(cod_facultad)
 );
 
+create table alumno(
+    ncuenta nvarchar(20) primary key,
+    DNI nvarchar(20),
+    cod_carrera nvarchar(20),
+    FOREIGN KEY (DNI) REFERENCES info_contacto(DNI),
+    FOREIGN KEY (cod_carrera) REFERENCES carrera(cod_carrera)
+);
+
 create table solicitud (
     id_solicitud nvarchar(20) primary key,
     fecha_solicitud date,
@@ -108,7 +111,8 @@ create table asignatura(
 );
 
 create table seccion (
-    cod_seccion nvarchar(20) primary key,
+	id_seccion nvarchar(20),
+    cod_seccion nvarchar(20),
     cod_asignatura nvarchar(20),
     cod_aula nvarchar(20),
     cod_docente nvarchar(20),
@@ -116,6 +120,7 @@ create table seccion (
     hora_inicio time,
     hora_final time,
     dias varchar(20),
+    primary key(id_seccion),
     FOREIGN KEY (cod_asignatura) REFERENCES asignatura(cod_asignatura),
     FOREIGN KEY (cod_aula) REFERENCES aula(cod_aula),
     FOREIGN KEY (cod_docente) REFERENCES docente(id_docente),
@@ -124,8 +129,8 @@ create table seccion (
 
 create table alumno_seccion (
     ncuenta nvarchar(20),
-    cod_asignatura nvarchar(20),
+    id_seccion nvarchar(20),
     calificacion int,
-    primary key(ncuenta, cod_asignatura),
-    FOREIGN KEY (cod_asignatura) REFERENCES asignatura(cod_asignatura)
+    primary key(ncuenta, id_seccion),
+    FOREIGN KEY (id_seccion) REFERENCES seccion(id_seccion)
 );
