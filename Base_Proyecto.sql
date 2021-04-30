@@ -122,7 +122,7 @@ create table seccion (
     FOREIGN KEY (cod_periodo) REFERENCES periodo(cod_periodo)
 );
 
-create table alumno_asignatura (
+create table alumno_seccion (
     ncuenta nvarchar(20),
     cod_asignatura nvarchar(20),
     calificacion int,
